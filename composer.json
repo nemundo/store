@@ -1,0 +1,18 @@
+{
+    "name": "nemundo/store",
+    "autoload": {
+        "psr-4": {
+            "Nemundo\\Store\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Urs Lang",
+            "email": "urs.lang@nemundo.ch"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "nemundo/framework": "*"
+    }
+}
