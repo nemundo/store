@@ -3,6 +3,7 @@
 namespace Nemundo\Store\Install;
 
 use Nemundo\App\Application\Type\Install\AbstractInstall;
+use Nemundo\App\Backup\Application\BackupApplication;
 use Nemundo\Model\Setup\ModelCollectionSetup;
 use Nemundo\Store\Data\StoreModelCollection;
 use Nemundo\Store\Usergroup\StoreUsergroup;
@@ -12,6 +13,8 @@ class StoreInstall extends AbstractInstall
 {
     public function install()
     {
+
+        (new BackupApplication())->installApp();
 
         (new ModelCollectionSetup())
             ->addCollection(new StoreModelCollection());
