@@ -11,7 +11,8 @@ class TestStore extends AbstractTextStoreType
     {
 
 
-        $this->storeId = '';
+        $this->storeId = '123123';
+
 
 
 

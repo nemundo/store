@@ -11,6 +11,11 @@ class StoreSite extends AbstractSite
     {
         $this->title = 'Store';
         $this->url = 'store';
+
+        new TextStoreEditSite($this);
+        new LargeTextStoreEditSite($this);
+        new HtmlTextStoreEditSite($this);
+
     }
 
     public function loadContent()

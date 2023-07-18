@@ -3,34 +3,30 @@
 namespace Nemundo\Store\Site;
 
 use Nemundo\Admin\Site\AbstractEditIconSite;
-use Nemundo\Admin\Template\AdminTemplate;
-
-use Nemundo\Store\Com\Form\TextStoreForm;
-use Nemundo\Store\Page\TextStorePage;
-use Nemundo\Store\Parameter\StoreParameter;
-use Nemundo\Store\Type\TextStoreType;
+use Nemundo\Store\Page\HtmlTextStorePage;
+use Nemundo\Store\Page\LargeTextStorePage;
 
 
-class TextStoreEditSite extends AbstractEditIconSite
+class HtmlTextStoreEditSite extends AbstractEditIconSite
 {
 
     /**
-     * @var TextStoreEditSite
+     * @var LargeTextStoreEditSite
      */
     public static $site;
 
     protected function loadSite()
     {
         $this->title = 'Editieren';
-        $this->url = 'text-store-edit';
-        TextStoreEditSite::$site = $this;
+        $this->url = 'html-text-store-edit';
+        HtmlTextStoreEditSite::$site = $this;
     }
 
 
     public function loadContent()
     {
 
-        (new TextStorePage())->render();
+        (new HtmlTextStorePage())->render();
 
         /*$store = new TextStoreType();
         $store->storeId = (new StoreParameter())->getValue();
