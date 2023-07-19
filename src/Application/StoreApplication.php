@@ -17,6 +17,6 @@ class StoreApplication extends AbstractApplication
         $this->modelCollectionClass = StoreModelCollection::class;
         $this->installClass = StoreInstall::class;
         $this->uninstallClass = StoreUninstall::class;
-        $this->adminSiteClass = StoreSite::class;
+        $this->appSiteClass = StoreSite::class;
     }
 }
