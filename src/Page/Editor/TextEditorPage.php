@@ -16,18 +16,11 @@ class TextEditorPage extends AbstractTemplateDocument
         $store = new TextStoreType();
         $store->storeId = (new StoreParameter())->getValue();
 
-        /*$page = new AdminTemplate();
-        $page->pageTitle = 'Edit';*/
-
-
-
         $form = new TextStoreForm($this);
         $form->store = $store;
         $form->urlRefererRedirect = true;
 
-
-
-
         return parent::getContent();
+
     }
 }

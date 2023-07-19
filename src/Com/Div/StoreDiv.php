@@ -10,7 +10,6 @@ use Nemundo\Store\Type\AbstractLargeTextStoreType;
 class StoreDiv extends AbstractHtmlContainer
 {
 
-
     /**
      * @var AbstractLargeTextStoreType
      */
@@ -19,14 +18,11 @@ class StoreDiv extends AbstractHtmlContainer
     public function getContent()
     {
 
-
         $div = new ContentDiv($this);
         $div->content = $this->store->getValue();
 
         $btn = new HtmlStoreSiteButton($this);
         $btn->store = $this->store;
-
-
 
         return parent::getContent();
 

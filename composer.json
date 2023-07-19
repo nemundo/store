@@ -2,8 +2,7 @@
     "name": "nemundo/store",
     "autoload": {
         "psr-4": {
-            "Nemundo\\Store\\": "src/",
-            "Nemundo\\StoreTest\\": "test/"
+            "Nemundo\\Store\\": "src/"
         }
     },
     "authors": [
