@@ -1,15 +1,13 @@
 <?php
 
-namespace Nemundo\Store\Page;
+namespace Nemundo\Store\Page\Editor;
 
 use Nemundo\Com\Template\AbstractTemplateDocument;
 use Nemundo\Store\Com\Form\HtmlStoreForm;
-use Nemundo\Store\Com\Form\TextStoreForm;
 use Nemundo\Store\Parameter\StoreParameter;
 use Nemundo\Store\Type\HtmlStoreType;
-use Nemundo\Store\Type\TextStoreType;
 
-class HtmlTextStorePage extends AbstractTemplateDocument
+class HtmlTextStoreEditorPage extends AbstractTemplateDocument
 {
     public function getContent()
     {

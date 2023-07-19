@@ -1,14 +1,10 @@
 <?php
 
-namespace Nemundo\Store\Site;
+namespace Nemundo\Store\Site\Editor;
 
 use Nemundo\Admin\Site\AbstractEditIconSite;
-use Nemundo\Admin\Template\AdminTemplate;
-
-use Nemundo\Store\Com\Form\TextStoreForm;
+use Nemundo\Store\Page\Editor\TextEditorPage;
 use Nemundo\Store\Page\TextStorePage;
-use Nemundo\Store\Parameter\StoreParameter;
-use Nemundo\Store\Type\TextStoreType;
 
 
 class TextStoreEditSite extends AbstractEditIconSite
@@ -30,7 +26,7 @@ class TextStoreEditSite extends AbstractEditIconSite
     public function loadContent()
     {
 
-        (new TextStorePage())->render();
+        (new TextEditorPage())->render();
 
         /*$store = new TextStoreType();
         $store->storeId = (new StoreParameter())->getValue();

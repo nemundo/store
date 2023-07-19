@@ -1,8 +1,9 @@
 <?php
 
-namespace Nemundo\Store\Site;
+namespace Nemundo\Store\Site\Editor;
 
 use Nemundo\Admin\Site\AbstractEditIconSite;
+use Nemundo\Store\Page\Editor\LargeTextEditorPage;
 use Nemundo\Store\Page\LargeTextStorePage;
 
 
@@ -25,7 +26,7 @@ class LargeTextStoreEditSite extends AbstractEditIconSite
     public function loadContent()
     {
 
-        (new LargeTextStorePage())->render();
+        (new LargeTextEditorPage())->render();
 
     }
 }
