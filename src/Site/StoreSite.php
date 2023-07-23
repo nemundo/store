@@ -25,8 +25,7 @@ class StoreSite extends AbstractSite
         new TextStoreSite($this);
         new LargeTextSite($this);
         new NumberStoreSite($this);
-        new TestSite($this);
-
+        //new TestSite($this);
 
         new TextStoreEditSite($this);
         new LargeTextStoreEditSite($this);

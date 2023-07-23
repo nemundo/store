@@ -6,6 +6,7 @@ use Nemundo\App\Application\Type\Install\AbstractInstall;
 use Nemundo\App\Backup\Application\BackupApplication;
 use Nemundo\App\Backup\Setup\BackupSetup;
 use Nemundo\Model\Setup\ModelCollectionSetup;
+use Nemundo\Store\Application\StoreApplication;
 use Nemundo\Store\Backup\LargeTextStoreBackup;
 use Nemundo\Store\Backup\TextStoreBackup;
 use Nemundo\Store\Data\StoreModelCollection;
@@ -25,7 +26,7 @@ class StoreInstall extends AbstractInstall
         (new UsergroupSetup())
             ->addUsergroup(new StoreUsergroup());
 
-        (new BackupSetup())
+        (new BackupSetup(new StoreApplication()))
             ->addBackup(new TextStoreBackup())
             ->addBackup(new LargeTextStoreBackup());
 
