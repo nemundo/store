@@ -3,9 +3,10 @@
 namespace Nemundo\Store\Com\Title;
 
 use Nemundo\Admin\Com\Title\AdminSubtitle;
-use Nemundo\Admin\Com\Title\AdminTitle;
 use Nemundo\Store\Com\Base\AbstractStoreContainer;
 use Nemundo\Store\Com\Button\TextStoreSiteButton;
+use Nemundo\Store\Usergroup\StoreUsergroup;
+use Nemundo\User\Usergroup\UsergroupMembership;
 
 class StoreSubtitle extends AbstractStoreContainer
 {
@@ -16,8 +17,10 @@ class StoreSubtitle extends AbstractStoreContainer
         $title = new AdminSubtitle($this);
         $title->content = $this->store->getValue();
 
-        $btn = new TextStoreSiteButton($this);
-        $btn->store = $this->store;
+        if ((new UsergroupMembership())->isMemberOfUsergroup(new StoreUsergroup())) {
+            $btn = new TextStoreSiteButton($this);
+            $btn->store = $this->store;
+        }
 
         return parent::getContent();
 
