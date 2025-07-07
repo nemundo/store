@@ -9,7 +9,7 @@ use Nemundo\Store\Type\AbstractLargeTextStoreType;
 use Nemundo\Store\Usergroup\StoreUsergroup;
 use Nemundo\User\Usergroup\UsergroupMembership;
 
-class StoreDiv extends AbstractHtmlContainer
+class HtmlStoreDiv extends AbstractHtmlContainer
 {
 
     /**

@@ -5,7 +5,7 @@ namespace Nemundo\Store\Page;
 use Nemundo\Admin\Com\Hr\AdminHr;
 use Nemundo\Admin\Com\Layout\AdminFlexboxLayout;
 use Nemundo\Com\Template\AbstractTemplateDocument;
-use Nemundo\Store\Com\Div\StoreDiv;
+use Nemundo\Store\Com\Div\HtmlStoreDiv;
 use Nemundo\Store\Com\Paragraph\StoreParagraph;
 use Nemundo\Store\Com\Tab\StoreTab;
 use Nemundo\Store\Com\Title\StoreTitle;
@@ -31,7 +31,7 @@ class TestPage extends AbstractTemplateDocument
 
         new AdminHr($layout);
 
-        $div = new StoreDiv($layout);
+        $div = new HtmlStoreDiv($layout);
         $div->store = new TestLargeTextStore();
 
         new AdminHr($layout);

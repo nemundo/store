@@ -1,18 +1,19 @@
 {
-    "name": "nemundo/store",
-    "autoload": {
-        "psr-4": {
-            "Nemundo\\Store\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Urs Lang",
-            "email": "urs.lang@nemundo.ch"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "nemundo/framework": "*"
+  "name": "nemundo/store",
+  "autoload": {
+    "psr-4": {
+      "Nemundo\\Store\\": "src/",
+      "Nemundo\\StoreTest\\": "test/"
     }
+  },
+  "authors": [
+    {
+      "name": "Urs Lang",
+      "email": "urs.lang@nemundo.ch"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "nemundo/framework": "*"
+  }
 }

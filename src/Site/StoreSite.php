@@ -6,6 +6,7 @@ use Nemundo\Store\Page\StorePage;
 use Nemundo\Store\Site\Editor\HtmlTextStoreEditSite;
 use Nemundo\Store\Site\Editor\LargeTextStoreEditSite;
 use Nemundo\Store\Site\Editor\TextStoreEditSite;
+use Nemundo\Store\Usergroup\StoreUsergroup;
 use Nemundo\Web\Site\AbstractSite;
 
 class StoreSite extends AbstractSite
@@ -21,6 +22,8 @@ class StoreSite extends AbstractSite
     {
         $this->title = 'Store';
         $this->url = 'store';
+        $this->restricted = true;
+        $this->addRestrictedUsergroup(new StoreUsergroup());
 
         new TextStoreSite($this);
         new LargeTextSite($this);
