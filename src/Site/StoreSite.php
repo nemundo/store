@@ -3,9 +3,9 @@
 namespace Nemundo\Store\Site;
 
 use Nemundo\Store\Page\StorePage;
-use Nemundo\Store\Site\Editor\HtmlTextStoreEditSite;
-use Nemundo\Store\Site\Editor\LargeTextStoreEditSite;
-use Nemundo\Store\Site\Editor\TextStoreEditSite;
+use Nemundo\Store\Site\Editor\HtmlTextStoreEditorSite;
+use Nemundo\Store\Site\Editor\LargeTextStoreEditorSite;
+use Nemundo\Store\Site\Editor\TextStoreEditorSite;
 use Nemundo\Store\Usergroup\StoreUsergroup;
 use Nemundo\Web\Site\AbstractSite;
 
@@ -28,11 +28,6 @@ class StoreSite extends AbstractSite
         new TextStoreSite($this);
         new LargeTextSite($this);
         new NumberStoreSite($this);
-        //new TestSite($this);
-
-        new TextStoreEditSite($this);
-        new LargeTextStoreEditSite($this);
-        new HtmlTextStoreEditSite($this);
 
         StoreSite::$site = $this;
 

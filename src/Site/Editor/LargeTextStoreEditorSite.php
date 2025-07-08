@@ -7,11 +7,11 @@ use Nemundo\Store\Page\Editor\LargeTextEditorPage;
 use Nemundo\Store\Page\LargeTextStorePage;
 
 
-class LargeTextStoreEditSite extends AbstractEditIconSite
+class LargeTextStoreEditorSite extends AbstractEditIconSite
 {
 
     /**
-     * @var LargeTextStoreEditSite
+     * @var LargeTextStoreEditorSite
      */
     public static $site;
 
@@ -19,7 +19,7 @@ class LargeTextStoreEditSite extends AbstractEditIconSite
     {
         $this->title = 'Editieren';
         $this->url = 'larege-text-store-edit';
-        LargeTextStoreEditSite::$site = $this;
+        LargeTextStoreEditorSite::$site = $this;
     }
 
 
